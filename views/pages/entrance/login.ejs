@@ -1,0 +1,34 @@
+<div id="login" v-cloak>
+    <div class="container-fluid pt-5 pb-5">
+
+        <ajax-form action="login" :syncing.sync="syncing" :cloud-error.sync="cloudError" :form-data="formData"
+                   :form-rules="formRules" :form-errors.sync="formErrors" @submitted="submittedForm()">
+            <div class="account-logo">
+                <a href="index-2.html"><img src="assets/img/logo-dark.png" alt=""></a>
+            </div>
+            <div class="form-group">
+                <label>Username or Email</label>
+                <input type="email" class="form-control" placeholder="Email address"
+                       :class="[formErrors.emailAddress ? 'is-invalid' : '']" v-model.trim="formData.emailAddress"
+                       autocomplete="email" focus-first>
+                <div class="invalid-feedback" v-if="formErrors.emailAddress">Please provide a valid email address.</div>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Password"
+                       :class="[formErrors.password ? 'is-invalid' : '']" v-model.trim="formData.password"
+                       autocomplete="current-password">
+                <div class="invalid-feedback" v-if="formErrors.password">Please enter your password.</div>
+            </div>
+            <div class="form-group text-right">
+                <a href="forgot-password.html">Forgot your password?</a>
+            </div>
+            <div class="form-group text-center">
+                <ajax-button :syncing="syncing" class="btn-dark btn-lg btn-block">Sign in</ajax-button>
+            </div>
+            <div class="text-center register-link">
+                Don’t have an account? <a href="/signup">Register Now</a>
+            </div>
+        </ajax-form>
+    </div>
+</div>
