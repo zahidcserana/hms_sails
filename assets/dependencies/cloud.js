@@ -1538,7 +1538,7 @@
         //////////////////////////////////////////////////////////////////////
         // e.g. function (argins){
         //   return {
-        //     verb: 'post',
+        //     verb: 'department',
         //     url: '/foo/bar',
         //     params: {
         //       whatever: 'you want' + ' in here maybe using '+argins.whatever
@@ -1575,7 +1575,7 @@
         // If a dictionary was supplied, use that as our request info.
         //////////////////////////////////////////////////////////////////////
         // e.g. {
-        //   verb: 'post',
+        //   verb: 'department',
         //   url: '/foo/bar',
         //   protocol: 'io.socket',//optional, defaults to 'jQuery'
         //   headers: {'x-auth': 'foo'},//optional, defaults to undefined

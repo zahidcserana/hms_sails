@@ -3033,7 +3033,7 @@ function flushSchedulerQueue () {
     }
   }
 
-  // keep copies of post queues before resetting state
+  // keep copies of department queues before resetting state
   var activatedQueue = activatedChildren.slice();
   var updatedQueue = queue.slice();
 
@@ -9151,7 +9151,7 @@ function parse (
     if (platformIsPreTag(element.tag)) {
       inPre = false;
     }
-    // apply post-transforms
+    // apply department-transforms
     for (var i = 0; i < postTransforms.length; i++) {
       postTransforms[i](element, options);
     }
